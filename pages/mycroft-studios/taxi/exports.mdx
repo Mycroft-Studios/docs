@@ -1,0 +1,121 @@
+# Export API
+
+import {Callout} from 'nextra/components';
+
+<Callout type="warning">
+    These Features require version `2.0.0` or higher of the Taxi System.
+</Callout>
+
+
+## Overview
+
+The Export API allows you to export data to/from the Taxi System. This can be used to integrate with other systems or build your own logic around the System.
+
+## CallTaxi
+
+```lua
+exports["om-taxi"]:CallTaxi(coords)
+```
+
+This function will call a taxi to the given coordinates. The `coords` parameter is an *optional* vector3, and if not provided, will default to the player's current position.
+
+## Getters
+
+### GetTaxiPrice
+
+```lua
+exports["om-taxi"]:GetTaxiPrice()
+```
+
+This function will return the current price of the taxi ride. This is calculated based on the distance the taxi has driven.
+
+### GetTaxiDestination
+
+```lua
+exports["om-taxi"]:GetTaxiDestination()
+```
+
+This function will return the current destination of the taxi. to see more information about the destination, see the [Taxi Destination](#taxi-destination) section.
+
+### GetTaxiHurry
+
+```lua
+exports["om-taxi"]:GetTaxiHurry()
+```
+
+This function will return whether the taxi is currently in hurry mode or not.
+
+### GetTaxiState
+
+```lua
+exports["om-taxi"]:GetTaxiState()
+```
+
+This function will return the current state of the taxi. to see more information about the state, see the [Taxi State](#taxi-state) section.
+
+### IsInTaxi
+
+```lua
+exports["om-taxi"]:IsInTaxi()
+```
+
+This function will return whether the player is currently in a taxi or not.
+
+## Setters
+
+### SetTaxiPrice
+
+```lua
+exports["om-taxi"]:SetTaxiPrice(price)
+```
+
+This function will set the current price of the taxi ride, overriding the default price calculation. The `price` parameter is a *required* number.
+
+### SetTaxiDestination
+
+```lua
+exports["om-taxi"]:SetTaxiDestination(destination)
+```
+
+This function will set the current destination of the taxi. The `destination` parameter is a *required* [Taxi Destination](#taxi-destination) object.
+
+### SetTaxiHurry
+
+```lua
+exports["om-taxi"]:SetTaxiHurry(hurry)
+```
+
+This function will set whether the taxi is currently in hurry mode or not. The `hurry` parameter is a *required* boolean.
+
+### SetTaxiState
+
+```lua
+exports["om-taxi"]:SetTaxiState(state)
+```
+
+This function will set the current state of the taxi. The `state` parameter is a *required* [Taxi State](#taxi-state) string.
+
+## Refercences
+
+### Taxi Destination
+
+The Taxi Destination object is a table with the following properties:
+    - index (starts at 0)
+    - 2: sprite (any blip sprite)
+    - 3: Color Red (0-255)
+    - 4: Color Green (0-255)
+    - 5: Color Blue (0-255)
+    - 6: Destination Name (usually the name of the blip)
+    - 7: Destination Zone (usually uses `GetNameOfZone`)
+    - 8: Street Name (usually uses `GetStreetNameAtCoord`)
+
+### Taxi State
+
+The Taxi State is a string with the following possible values:
+    - `DriveToPlayer` - the taxi is driving to the player
+    - `PullOver` - the taxi is pulling over to let the player in
+    - `Stop` - the taxi is at the destination and is stopping
+    - `DriveToDestination` - the taxi is driving to the destination
+
+
+
