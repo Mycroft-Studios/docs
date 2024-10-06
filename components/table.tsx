@@ -33,7 +33,7 @@ interface TableProps {
     rows: RowProps[]
 }
 
-const MyTable: React.FC<DialogTabProps> = ({
+const MyTable: React.FC<TableProps> = ({
     head,
     rows
 }) => {
