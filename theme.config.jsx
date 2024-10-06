@@ -14,7 +14,7 @@ function useHead() {
       <link rel="icon" type="image/png" href="/static/logo_white_small.png" />
       <meta httpEquiv="Content-Language" content="en" />
       <meta name="description" content={description} />
-      <meta name="og:title" content={title} />
+        {asPath === "/" && <meta name="og:title" content="Mycroft Stuidos" />|| <meta name="og:title" content={title + " - Mycroft Studios"} />}
       <meta name="og:description" content={description} />
       <meta name="og:url" content={url} />
         <meta name="og:type" content="website" />
