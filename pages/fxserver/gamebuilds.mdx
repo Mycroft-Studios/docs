@@ -30,59 +30,31 @@ sv_enforceGameBuild <number>
 ```
 > Note: Insert without the `<>`
 
-<MantineProvider theme={{
-    fontSizes: {
-        sm: rem(16),
-    },
-    colorScheme: 'dark',
-    colors: {
-        // override dark colors here to change them for all components
-        dark: [
-            '#d5d7e0',
-            '#acaebf',
-            '#8c8fa3',
-            '#666980',
-            '#4d4f66',
-            '#292929',
-            '#292929',
-            '#111111',
-            '#0c0d21',
-            '#01010a',
-        ],
-    },
-}}>
-    ## Build Numbers
+### FiveM
 
-    ### FiveM
+<MyTable rows = {[
+    {DLC: 'The Chop Shop', Number: 3095, info: "https://forge.plebmasters.de/dlcs?name=mp2023_02"},
+    {DLC: 'San Andreas Mercenaries', Number: 2944, info: "https://forge.plebmasters.de/dlcs?name=mp2023_01"},
+    {DLC: 'Los Santos Drug Wars', Number: 2802, info: "https://forge.plebmasters.de/dlcs?name=mpchristmas3"},
+    {DLC: 'The Criminal Enterprises', Number: 2699, info: "https://forge.plebmasters.de/dlcs?name=mpsum2"},
+    {DLC: 'The Contract', Number: 2545, info: "https://forge.plebmasters.de/dlcs?name=mpsecurity"},
+    {DLC: "Los Santos Tuners", Number: 2372, info: "https://forge.plebmasters.de/dlcs?name=mpsecurity"},
+    {DLC: 'Cayo Perico Heist', Number: 2189, info: "https://forge.plebmasters.de/dlcs?name=mptuner"},
+    {DLC: 'Los Santos Summer Special', Number: 2060, info: "https://forge.plebmasters.de/dlcs?name=mpheist4"},
+    {DLC: 'Arena War', Number: 1604, info: "https://forge.plebmasters.de/dlcs?name=mpchristmas2018"},
+]} head = {[
+    {accessor: 'Number', width: "20%", title: 'Build'},
+    {accessor: 'DLC', width: "55%", title: 'DLC Name'},
+    {accessor: 'info', title: 'Information', width: "25%" },
+]}/>
 
-    <MyTable rows = {[
-      {DLC: 'The Chop Shop', Number: 3095, info: "https://forge.plebmasters.de/dlcs?name=mp2023_02"},
-      {DLC: 'San Andreas Mercenaries', Number: 2944, info: "https://forge.plebmasters.de/dlcs?name=mp2023_01"},
-      {DLC: 'Los Santos Drug Wars', Number: 2802, info: "https://forge.plebmasters.de/dlcs?name=mpchristmas3"},
-      {DLC: 'The Criminal Enterprises', Number: 2699, info: "https://forge.plebmasters.de/dlcs?name=mpsum2"},
-      {DLC: 'The Contract', Number: 2545, info: "https://forge.plebmasters.de/dlcs?name=mpsecurity"},
-      {DLC: "Los Santos Tuners", Number: 2372, info: "https://forge.plebmasters.de/dlcs?name=mpsecurity"},
-      {DLC: 'Cayo Perico Heist', Number: 2189, info: "https://forge.plebmasters.de/dlcs?name=mptuner"},
-      {DLC: 'Los Santos Summer Special', Number: 2060, info: "https://forge.plebmasters.de/dlcs?name=mpheist4"},
-      {DLC: 'Arena War', Number: 1604, info: "https://forge.plebmasters.de/dlcs?name=mpchristmas2018"},
-    ]} head = {[
-     {accessor: 'Number', width: "20%" },
-     {accessor: 'DLC', width: "55%", title: 'DLC Name'},
-        {accessor: 'info', title: 'Information', render: ({ info }) => (
-               <a href={info} target="_blank" rel="noopener noreferrer">More Info</a>
-            ),},
-    ]}/>
-
-    ### RedM
-
-    <MyTable rows = {[
+### RedM
+<MyTable rows = {[
         {DLC: 'September 2022 update.', Number: 1491 },
         {DLC: 'July 2021 update - Blood Money DLC.', Number: 2802 },
         {DLC: 'December 2020 update', Number: 1355 },
         {DLC: 'Mid 2020 update', Number: 1311 },
     ]} head = {[
-        {accessor: 'Number', width: "10%" },
-        {accessor: 'DLC', width: "60%", title: 'Notes/DLC Name'},
-    ]}/>
-</MantineProvider>
-
+        {accessor: 'Number', width: "10%", title: 'Build'},
+        {accessor: 'DLC', width: "60%", title: 'DLC Name'},
+]}/>

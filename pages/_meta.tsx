@@ -1,7 +1,7 @@
 export default {
     "index": "Home",
     "fxserver": "FXServer",
-    // "mycroft-studios": "Mycroft Studios",
+    "mycroft-studios": "My Scripts",
     "about": {
         "title": "About",
         "type": "page"

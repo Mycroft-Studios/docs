@@ -13,7 +13,6 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 500,
     boxShadow: 24,
 };
 
@@ -29,9 +28,9 @@ const LinkButton: React.FC<LinkButtonProps> = ({text, image}) => {
 
     return (
         <>
-            <code className={"nx-border-black nx-border-opacity-[0.04] nx-bg-opacity-[0.03] nx-bg-black nx-break-words nx-rounded-md nx-border nx-py-0.5 nx-px-[.25em] nx-text-[.9em] dark:nx-border-white/10 dark:nx-bg-white/10"}
+            <code className={"font-light text-blue-400 underline"}
                   onClick={handleOpen}
-                  style={{cursor: "pointer", color: blue[500], textDecoration: "underline"}}
+                  style={{cursor: "pointer"}}
             >{text}
             </code>
             <Modal
@@ -40,7 +39,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({text, image}) => {
                 aria-labelledby="parent-modal-title"
                 aria-describedby="parent-modal-description"
             >
-                <Box sx={{ ...style, width: 500 }}>
+                <Box sx={{ ...style, minWidth: "35%", maxWidth: "50%" }}>
                     <img src={image}  alt={text} style={{width: "100%", height: "100%"}}/>
                 </Box>
             </Modal>

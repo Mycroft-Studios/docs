@@ -1,9 +1,15 @@
 import React from 'react';
-import Tooltip from '@mui/material/Tooltip';
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
 import {blue} from "@mui/material/colors";
+import { ThemeProvider } from "@/components/theme-provider"
 
 interface definitionTextProps {
-    text: string,
+    [index: string]: string;
 }
 
 const style = {
@@ -15,7 +21,7 @@ const style = {
     boxShadow: 24,
 };
 
-const Definitions = {
+const Definitions : definitionTextProps = {
     "server.cfg": "The server configuration file",
     "CFG Editor": "A tab within the txAdmin interface that allows you to edit the server.cfg file",
     "txAdmin": "The web interface for managing your server",
@@ -35,12 +41,24 @@ const Definitions = {
 };
 
 
-const DefinitionText: React.FC<definitionTextProps> = ({text}) => {
-    const definition = Definitions[text];
+const DefinitionText: ({text}: { text: string }) => React.JSX.Element = ({text}) => {
+    const definition : string = Definitions[text];
     return (
-        <Tooltip title={definition} arrow>
-            <b style={{color: blue[300]}}>{text}</b>
-        </Tooltip>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+            <TooltipProvider>
+                <Tooltip>
+                    <TooltipTrigger className={"font-bold text-blue-500"}>{text}</TooltipTrigger>
+                    <TooltipContent>
+                        <p>{definition}</p>
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
+        </ThemeProvider>
     );
 }
 

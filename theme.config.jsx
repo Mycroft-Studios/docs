@@ -7,7 +7,6 @@ function useHead() {
   const { frontMatter, title } = useConfig();
   const url = `https://mycroft-studios.co.uk${asPath}`;
   const description = frontMatter.description || "Mycroft Studios Documentation";
-
   return (
     <>
       {asPath === "/" && <title> Mycroft Studios </title> || <title> {title} - Mycroft Studios </title>}
@@ -18,6 +17,8 @@ function useHead() {
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
       <meta name="og:url" content={url} />
+        <meta name="og:type" content="website" />
+        <meta name="og:image" content="/static/logo_white_small.png" />
     </>
   );
 }

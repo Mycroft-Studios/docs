@@ -1,34 +1,71 @@
 import * as React from 'react';
-import { Table, TableData } from '@mantine/core';
+import {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
+import { ThemeProvider } from "@/components/theme-provider"
+import {width} from "@mui/system";
 
 interface DialogTabProps {
     head: any,
     rows: unknown[]
 }
 
-const theme = {
+interface HeadProps {
+    accessor: string,
+    width: string,
+    title: string
+}
 
+interface RowProps {
+    DLC: string,
+    Number: number,
+    info: string,
+}
+
+interface TableProps {
+    head: HeadProps[],
+    rows: RowProps[]
 }
 
 const MyTable: React.FC<DialogTabProps> = ({
     head,
     rows
 }) => {
-    const tableData: TableData = {
-        caption: 'Some elements from periodic table',
-        head: ['Element position', 'Atomic mass', 'Symbol', 'Element name'],
-        body: [
-            [6, 12.011, 'C', 'Carbon'],
-            [7, 14.007, 'N', 'Nitrogen'],
-            [39, 88.906, 'Y', 'Yttrium'],
-            [56, 137.33, 'Ba', 'Barium'],
-            [58, 140.12, 'Ce', 'Cerium'],
-        ],
-    };
     return (
-        <Table
-            data={tableData}
-        />
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+            <Table className={"w-[500px]"}>
+                <TableHeader>
+                    <TableRow>
+                        {head.map((item: HeadProps) => (
+                            <TableHead key={item.accessor} style={{width: item.width}}>{item.title}</TableHead>
+                        ))}
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    {rows.map((item: RowProps) => (
+                        <React.Fragment key={item.DLC}>
+                            <TableRow>
+                                <TableCell>{item.Number}</TableCell>
+                                <TableCell>{item.DLC}</TableCell>
+
+                                {item.info && <TableCell><a href={item.info} className={"text-primary font-bold text-blue-500"}>View Info </a></TableCell>}
+                            </TableRow>
+                        </React.Fragment>
+                    ))}
+                </TableBody>
+            </Table>
+        </ThemeProvider>
     );
 }
 

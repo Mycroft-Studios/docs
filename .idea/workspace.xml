@@ -5,37 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d931e51-8af1-4aec-8c84-43bb961ffbb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/_meta.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/counters.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/counters.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/stats.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/theme-provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/mycroft-studios/_meta.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/definitionText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/definitionText.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/link_button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/link_button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/table.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/table.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_meta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_meta.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/about.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fxserver.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fxserver.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fxserver/_meta.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/fxserver/gamebuilds.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fxserver/gamebuilds.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fxserver/mysql_setup.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fxserver/mysql_setup.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fxserver/patreon.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fxserver/patreon.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mycroft-studios/_meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mycroft-studios/taxi.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mycroft-studios/taxi/_meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mycroft-studios/taxi/controls.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mycroft-studios/taxi/exports.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme.config.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme.config.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/theme.config.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +56,7 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/kasey/Documents/GitHub/docs",
+    "last_opened_file_path": "C:/Users/kasey/Documents/GitHub/docs/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +76,10 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kasey\Documents\GitHub\docs\components" />
+      <recent name="C:\Users\kasey\Documents\GitHub\docs\pages\mycroft-studios" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kasey\Documents\GitHub\docs" />
     </key>
@@ -91,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728181736638</updated>
-      <workItem from="1728181737867" duration="2821000" />
+      <workItem from="1728181737867" duration="11430000" />
     </task>
     <servers />
   </component>
