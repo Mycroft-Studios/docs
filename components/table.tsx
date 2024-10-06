@@ -25,7 +25,8 @@ interface HeadProps {
 interface RowProps {
     DLC: string,
     Number: number,
-    info: string,
+    info?: string,
+    notStable?: boolean
 }
 
 interface TableProps {
@@ -59,7 +60,7 @@ const MyTable: React.FC<TableProps> = ({
                                 <TableCell>{item.Number}</TableCell>
                                 <TableCell>{item.DLC}</TableCell>
 
-                                {item.info && <TableCell><a href={item.info} className={"text-primary font-bold text-blue-500"}>View Info </a></TableCell>}
+                                {item.info && <TableCell><a href={item.info} className={item.notStable && "text-destructive font-bold" || "text-primary font-bold"}>{item.notStable && "Not Stable" || "View Info"} </a></TableCell>}
                             </TableRow>
                         </React.Fragment>
                     ))}
