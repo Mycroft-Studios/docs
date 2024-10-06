@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d931e51-8af1-4aec-8c84-43bb961ffbb5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fxserver/gamebuilds.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fxserver/gamebuilds.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
