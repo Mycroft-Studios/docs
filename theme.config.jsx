@@ -19,7 +19,8 @@ function useHead() {
       <meta name="og:url" content={url} />
         <meta name="og:type" content="website" />
         <meta name="og:image" content="/static/logo_white_small.png" />
-    </>
+        <meta name="keywords" content="HTML, CSS, JavaScript, FiveM, Scripts, Free, ESX, Qbus, QB, qb-core, ox, overextended, qbox, txAdmin, server, fxserver, mycroft, lua, tutorial, Website, learn, code, Cfx, Cfx.re, GTA, Gta V, GTA 5, leaks, wasabi, okok, dirk, Rockstar, Games, Warden, RedM, ox_inventory, ox_lib, scripts, hacks, 2024, working, social club, xbox, playstation, cheats, forums, github, store, Framework, documentation, docs, tebex, patreon, game, build, taxi, scaleform, AI, gta online, gta:o, inspired"/>
+      </>
   );
 }
 
