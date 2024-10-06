@@ -3,7 +3,7 @@ title: Home
 description: Welcome to the Mycroft Studios Documentation Page!
 ---
 
-import {Cards, Card} from 'nextra/components'
+import {Cards} from 'nextra/components'
 import DownloadIcon from '@mui/icons-material/Download';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import DnsIcon from '@mui/icons-material/Dns';
@@ -32,14 +32,13 @@ These elements are:
 - <DefinitionText text={"Definition Tooltips"}/> (used to show definitions of certain words)
 - <LinkButton text={"Image Buttons"} image={"../static/example.png"}/> (used to show images in a user-friendly way)
 
-
 ## Useful guides
 
 Some useful guides you might want to check out!
 
 <Cards>
-    <Card icon={<DownloadIcon/>} title="Server Creation" href="/fxserver"/>
-    <Card icon={<DnsIcon/>} title="MySQL Servers" href="/fxserver/mysql_server"/>
-    <Card icon={<UpgradeIcon/>} title="Game Builds" href="/fxserver/gamebuilds"/>
-    <Card icon={<VpnKeyIcon/>} title="Patreon Keys Explained" href="/fxserver/patreon"/>
+    <Cards.Card icon={<DownloadIcon/>} title="Server Creation" href="/fxserver"/>
+    <Cards.Card icon={<DnsIcon/>} title="MySQL Servers" href="/fxserver/mysql_database"/>
+    <Cards.Card icon={<UpgradeIcon/>} title="Game Builds" href="/fxserver/gamebuilds"/>
+    <Cards.Card icon={<VpnKeyIcon/>} title="Patreon Keys Explained" href="/fxserver/patreon"/>
 </Cards>

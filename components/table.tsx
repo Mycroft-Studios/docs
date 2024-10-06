@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DataTable } from 'mantine-datatable';
+import { Table, TableData } from '@mantine/core';
 
 interface DialogTabProps {
     head: any,
@@ -10,25 +10,26 @@ const theme = {
 
 }
 
-const Table: React.FC<DialogTabProps> = ({
+const MyTable: React.FC<DialogTabProps> = ({
     head,
     rows
 }) => {
+    const tableData: TableData = {
+        caption: 'Some elements from periodic table',
+        head: ['Element position', 'Atomic mass', 'Symbol', 'Element name'],
+        body: [
+            [6, 12.011, 'C', 'Carbon'],
+            [7, 14.007, 'N', 'Nitrogen'],
+            [39, 88.906, 'Y', 'Yttrium'],
+            [56, 137.33, 'Ba', 'Barium'],
+            [58, 140.12, 'Ce', 'Cerium'],
+        ],
+    };
     return (
-        <div style={{ zIndex: 10000 }}>
-                <DataTable
-                    withBorder={false}
-                    fontSize="sm"
-                    shadow="xl"
-                    borderRadius="sm"
-                    withColumnBorders
-                    highlightOnHover
-                    records={rows}
-                    sx={{maxWidth: "60%",marginTop:5, zIndex: 10000, maxHeight: "25%", overflow: "auto"}}
-                    columns={head}
-                />
-        </div>
+        <Table
+            data={tableData}
+        />
     );
 }
 
-export default Table;
+export default MyTable;

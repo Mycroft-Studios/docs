@@ -10,6 +10,7 @@ function useHead() {
 
   return (
     <>
+      {asPath === "/" && <title> Mycroft Studios </title> || <title> {title} - Mycroft Studios </title>}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/png" href="/static/logo_white_small.png" />
       <meta httpEquiv="Content-Language" content="en" />
@@ -21,25 +22,7 @@ function useHead() {
   );
 }
 
-function useNextSeoProps() {
-    const { asPath } = useRouter();
-    const arr = asPath.replace(/[-_]/g, ' ').split('/');
-    const rawTitle = arr[arr.length - 1];
-    const title = /[a-z]/.test(rawTitle) && /[A-Z]/.test(rawTitle) ? rawTitle : '%s';
-
-    if (asPath === "/") {
-        return {
-            titleTemplate: `Mycroft Studios`,
-        }
-    } else {
-        return {
-            titleTemplate: `${title} - Mycroft Studios`,
-        }
-    }
-}
-
-
-const config: DocsThemeConfig = {
+const config = {
     logo: (
         <div
       style={{
@@ -61,10 +44,18 @@ const config: DocsThemeConfig = {
   },
   head: useHead,
   docsRepositoryBase: 'https://github.com/mycroft-studios/docs/blob/main',
+    toc: {
+        backToTop: true,
+    },
   footer: {
-    text: 'Mycroft Studios - Dedicated To Excellence.',
+      content: (
+          <span>
+        MIT {new Date().getFullYear()} ©{' '}
+             <a href="https://github.com/Mycroft-Studios">Mycroft Studios</a>
+        .
+      </span>
+      )
   },
-  useNextSeoProps: useNextSeoProps,
 }
 
 export default config

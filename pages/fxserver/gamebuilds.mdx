@@ -4,12 +4,10 @@ description: Learn how to set the game build on your FiveM or RedM server.
 ---
 import { Callout } from "nextra/components";
 import DefinitionText from "../../components/definitionText"
-import Table from "components/table";
+import MyTable from "../../components/table";
 import { MantineProvider, rem } from '@mantine/core';
 
 # Game Builds
-
-## What Are they?
 
 The `Game Build`, is the version of the game you are running, often defined as the `DLC version`.
 Using this allows you to unlock and use certain parts of `GTA 5`/ `Red Dead Redemption`. These parts include, but are not limited to:
@@ -57,7 +55,7 @@ sv_enforceGameBuild <number>
 
     ### FiveM
 
-    <Table rows = {[
+    <MyTable rows = {[
       {DLC: 'The Chop Shop', Number: 3095, info: "https://forge.plebmasters.de/dlcs?name=mp2023_02"},
       {DLC: 'San Andreas Mercenaries', Number: 2944, info: "https://forge.plebmasters.de/dlcs?name=mp2023_01"},
       {DLC: 'Los Santos Drug Wars', Number: 2802, info: "https://forge.plebmasters.de/dlcs?name=mpchristmas3"},
@@ -77,7 +75,7 @@ sv_enforceGameBuild <number>
 
     ### RedM
 
-    <Table rows = {[
+    <MyTable rows = {[
         {DLC: 'September 2022 update.', Number: 1491 },
         {DLC: 'July 2021 update - Blood Money DLC.', Number: 2802 },
         {DLC: 'December 2020 update', Number: 1355 },
